@@ -1,0 +1,222 @@
+[
+  {
+    "id": "meta-llama/llama-prompt-guard-2-22m",
+    "name": "meta-llama/llama-prompt-guard-2-22m",
+    "provider": "groq",
+    "family": null,
+    "created_at": "2025-05-30 19:08:21 UTC",
+    "context_window": 512,
+    "max_output_tokens": 512,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "Meta"
+    }
+  },
+  {
+    "id": "openai/gpt-oss-safeguard-20b",
+    "name": "openai/gpt-oss-safeguard-20b",
+    "provider": "groq",
+    "family": null,
+    "created_at": "2025-10-29 03:33:09 UTC",
+    "context_window": 131072,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "OpenAI"
+    }
+  },
+  {
+    "id": "meta-llama/llama-prompt-guard-2-86m",
+    "name": "meta-llama/llama-prompt-guard-2-86m",
+    "provider": "groq",
+    "family": null,
+    "created_at": "2025-05-30 19:09:25 UTC",
+    "context_window": 512,
+    "max_output_tokens": 512,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "Meta"
+    }
+  },
+  {
+    "id": "canopylabs/orpheus-v1-english",
+    "name": "canopylabs/orpheus-v1-english",
+    "provider": "groq",
+    "family": null,
+    "created_at": "2025-12-19 23:18:36 UTC",
+    "context_window": 4000,
+    "max_output_tokens": 50000,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "Canopy Labs"
+    }
+  },
+  {
+    "id": "whisper-large-v3",
+    "name": "whisper-large-v3",
+    "provider": "groq",
+    "family": null,
+    "created_at": "2023-09-03 06:14:58 UTC",
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "OpenAI"
+    }
+  },
+  {
+    "id": "qwen/qwen3.8-27b",
+    "name": "qwen/qwen3.8-27b",
+    "provider": "groq",
+    "family": null,
+    "created_at": "2026-08-17 16:40:46 UTC",
+    "context_window": 131072,
+    "max_output_tokens": 16384,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "Alibaba Cloud"
+    }
+  },
+  {
+    "id": "openai/gpt-oss-120b",
+    "name": "openai/gpt-oss-120b",
+    "provider": "groq",
+    "family": null,
+    "created_at": "2025-08-05 15:37:04 UTC",
+    "context_window": 131072,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "OpenAI"
+    }
+  },
+  {
+    "id": "allam-2-7b",
+    "name": "allam-2-7b",
+    "provider": "groq",
+    "family": null,
+    "created_at": "2025-01-23 22:43:23 UTC",
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "SDAIA"
+    }
+  },
+  {
+    "id": "openai/gpt-oss-20b",
+    "name": "openai/gpt-oss-20b",
+    "provider": "groq",
+    "family": null,
+    "created_at": "2025-08-05 15:32:37 UTC",
+    "context_window": 131072,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "OpenAI"
+    }
+  },
+  {
+    "id": "whisper-large-v3-turbo",
+    "name": "whisper-large-v3-turbo",
+    "provider": "groq",
+    "family": null,
+    "created_at": "2024-10-08 18:44:48 UTC",
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "OpenAI"
+    }
+  },
+  {
+    "id": "canopylabs/orpheus-arabic-saudi",
+    "name": "canopylabs/orpheus-arabic-saudi",
+    "provider": "groq",
+    "family": null,
+    "created_at": "2025-12-16 23:07:19 UTC",
+    "context_window": 4000,
+    "max_output_tokens": 50000,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "Canopy Labs"
+    }
+  }
+]
