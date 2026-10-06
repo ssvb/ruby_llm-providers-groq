@@ -12,12 +12,30 @@ module RubyLLM
           'models'
         end
 
+        # replace 'output_text' with 'input_text'
+        def sanitize_input_types!(node)
+          case node
+          when Hash
+            node.each do |key, value|
+              if (key == :type || key == 'type') && (value == :output_text || value == 'output_text')
+                node[key] = value.is_a?(Symbol) ? :input_text : 'input_text'
+              else
+                sanitize_input_types!(value)
+              end
+            end
+          when Array
+            node.each { |element| sanitize_input_types!(element) }
+          end
+        end
+
         # Groq does not support the 'include' field
         def render_payload(...)
           payload = super
+          sanitize_input_types!(payload[:input]) if payload[:input]
           payload.delete(:include)
           payload
         end
+
       end
 
       protocol :responses, Responses
