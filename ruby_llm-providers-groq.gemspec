@@ -3,12 +3,12 @@
 Gem::Specification.new do |spec|
   spec.name = 'ruby_llm-providers-groq'
   spec.version = '0.1.0'
-  spec.authors = ['your-github-org']
-  spec.email = ['maintainers@example.com']
+  spec.authors = ['Siarhiej Siamaška']
+  spec.email = ['siarhei.siamashka@gmail.com']
 
   spec.summary = 'RubyLLM provider for Groq.'
   spec.description = 'Adds Groq provider support to RubyLLM.'
-  spec.homepage = 'https://github.com/your-github-org/ruby_llm-providers-groq'
+  spec.homepage = 'https://github.com/ssvb/ruby_llm-providers-groq'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 3.1'
 
@@ -24,5 +24,5 @@ Gem::Specification.new do |spec|
                %w[.flayignore .overcommit.yml .rspec .rubocop.yml Archspec.rb LICENSE README.md]
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'ruby_llm', '>= 2.0.0.rc1'
+  spec.add_dependency 'ruby_llm', '~> 2.0', '>= 2.0.0'
 end
