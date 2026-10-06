@@ -11,6 +11,13 @@ module RubyLLM
         def models_url
           'models'
         end
+
+        # Groq does not support the 'include' field
+        def render_payload(...)
+          payload = super
+          payload.delete(:include)
+          payload
+        end
       end
 
       protocol :responses, Responses
