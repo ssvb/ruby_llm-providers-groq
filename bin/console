@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler/setup'
+require 'dotenv/load'
+require 'ruby_llm/providers/groq'
+
+require 'irb'
+
+RubyLLM.configure do |config|
+  config.groq_api_key = ENV.fetch('GROQ_API_KEY', nil)
+  config.groq_api_base = ENV.fetch('GROQ_API_BASE', 'https://api.groq.com/openai/v1')
+end
+
+IRB.start(__FILE__)
