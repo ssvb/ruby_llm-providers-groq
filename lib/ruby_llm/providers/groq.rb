@@ -12,6 +12,7 @@ module RubyLLM
           'models'
         end
 
+        # rubocop:disable-next Metrics/CyclomaticComplexity,Metrics/PerceivedComplexity,Style/MultipleComparison
         # replace 'output_text' with 'input_text'
         def sanitize_input_types!(node)
           case node
@@ -35,7 +36,6 @@ module RubyLLM
           payload.delete(:include)
           payload
         end
-
       end
 
       protocol :responses, Responses

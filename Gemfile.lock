@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     ruby_llm-providers-groq (0.1.0)
-      ruby_llm (>= 2.0.0.rc1)
+      ruby_llm (~> 2.0, >= 2.0.0)
 
 GEM
   remote: https://rubygems.org/
