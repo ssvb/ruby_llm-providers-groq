@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = 'ruby_llm-providers-groq'
-  spec.version = '0.1.0'
+  spec.version = '2.0.0.pre.1'
   spec.authors = ['Siarhiej Siamaška']
   spec.email = ['siarhei.siamashka@gmail.com']
 
@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.description = 'Adds Groq provider support to RubyLLM.'
   spec.homepage = 'https://github.com/ssvb/ruby_llm-providers-groq'
   spec.license = 'MIT'
-  spec.required_ruby_version = '>= 3.1'
+  spec.required_ruby_version = '>= 3.3'
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = spec.homepage
