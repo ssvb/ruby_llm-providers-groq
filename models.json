@@ -9,8 +9,8 @@
     "max_output_tokens": 512,
     "knowledge_cutoff": null,
     "modalities": {
-      "input": [],
-      "output": []
+      "input": ["text"],
+      "output": ["moderation"]
     },
     "capabilities": [],
     "pricing": {},
@@ -29,10 +29,12 @@
     "max_output_tokens": 65536,
     "knowledge_cutoff": null,
     "modalities": {
-      "input": [],
-      "output": []
+      "input": ["text"],
+      "output": ["text"]
     },
-    "capabilities": [],
+    "capabilities": [
+      "reasoning"
+    ],
     "pricing": {},
     "metadata": {
       "object": "model",
@@ -49,8 +51,8 @@
     "max_output_tokens": 512,
     "knowledge_cutoff": null,
     "modalities": {
-      "input": [],
-      "output": []
+      "input": ["text"],
+      "output": ["moderation"]
     },
     "capabilities": [],
     "pricing": {},
@@ -69,10 +71,12 @@
     "max_output_tokens": 50000,
     "knowledge_cutoff": null,
     "modalities": {
-      "input": [],
-      "output": []
+      "input": ["text"],
+      "output": ["audio"]
     },
-    "capabilities": [],
+    "capabilities": [
+      "speech_generation"
+    ],
     "pricing": {},
     "metadata": {
       "object": "model",
@@ -89,8 +93,8 @@
     "max_output_tokens": null,
     "knowledge_cutoff": null,
     "modalities": {
-      "input": [],
-      "output": []
+      "input": ["audio"],
+      "output": ["text"]
     },
     "capabilities": [],
     "pricing": {},
@@ -109,10 +113,14 @@
     "max_output_tokens": 16384,
     "knowledge_cutoff": null,
     "modalities": {
-      "input": [],
-      "output": []
+      "input": ["text", "image"],
+      "output": ["text"]
     },
-    "capabilities": [],
+    "capabilities": [
+      "reasoning",
+      "structured_output",
+      "vision"
+    ],
     "pricing": {},
     "metadata": {
       "object": "model",
@@ -127,36 +135,19 @@
     "created_at": "2025-08-05 15:37:04 UTC",
     "context_window": 131072,
     "max_output_tokens": 65536,
-    "knowledge_cutoff": null,
+    "knowledge_cutoff": "2024-06-30",
     "modalities": {
-      "input": [],
-      "output": []
+      "input": ["text"],
+      "output": ["text"]
     },
-    "capabilities": [],
+    "capabilities": [
+      "reasoning",
+      "structured_output"
+    ],
     "pricing": {},
     "metadata": {
       "object": "model",
       "owned_by": "OpenAI"
-    }
-  },
-  {
-    "id": "allam-2-7b",
-    "name": "allam-2-7b",
-    "provider": "groq",
-    "family": null,
-    "created_at": "2025-01-23 22:43:23 UTC",
-    "context_window": null,
-    "max_output_tokens": null,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [],
-      "output": []
-    },
-    "capabilities": [],
-    "pricing": {},
-    "metadata": {
-      "object": "model",
-      "owned_by": "SDAIA"
     }
   },
   {
@@ -167,12 +158,15 @@
     "created_at": "2025-08-05 15:32:37 UTC",
     "context_window": 131072,
     "max_output_tokens": 65536,
-    "knowledge_cutoff": null,
+    "knowledge_cutoff": "2024-06-30",
     "modalities": {
-      "input": [],
-      "output": []
+      "input": ["text"],
+      "output": ["text"]
     },
-    "capabilities": [],
+    "capabilities": [
+      "reasoning",
+      "structured_output"
+    ],
     "pricing": {},
     "metadata": {
       "object": "model",
@@ -189,8 +183,8 @@
     "max_output_tokens": null,
     "knowledge_cutoff": null,
     "modalities": {
-      "input": [],
-      "output": []
+      "input": ["audio"],
+      "output": ["text"]
     },
     "capabilities": [],
     "pricing": {},
@@ -209,10 +203,12 @@
     "max_output_tokens": 50000,
     "knowledge_cutoff": null,
     "modalities": {
-      "input": [],
-      "output": []
+      "input": ["text"],
+      "output": ["audio"]
     },
-    "capabilities": [],
+    "capabilities": [
+      "speech_generation"
+    ],
     "pricing": {},
     "metadata": {
       "object": "model",
