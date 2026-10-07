@@ -1,0 +1,160 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.groq.com/openai/v1/responses
+    body:
+      encoding: UTF-8
+      string: '{"model":"qwen/qwen3.8-27b","input":[{"role":"user","content":"Who
+        created the programming language Ruby?"}],"stream":false,"store":false}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 07 Oct 2026 16:48:55 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - private, max-age=0, no-store, no-cache, must-revalidate
+      Server:
+      - cloudflare
+      Vary:
+      - Origin
+      X-Groq-Region:
+      - dls
+      X-Ratelimit-Limit-Requests:
+      - '1000'
+      X-Ratelimit-Limit-Tokens:
+      - '8000'
+      X-Ratelimit-Remaining-Requests:
+      - '997'
+      X-Ratelimit-Remaining-Tokens:
+      - '7254'
+      X-Ratelimit-Reset-Requests:
+      - 4m19.2s
+      X-Ratelimit-Reset-Tokens:
+      - 43.62s
+      X-Request-Id:
+      - req_01m4bm97mcerbbmcj4v969c3je
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=kfX4wKdzdMJ4gmb9lwuyD_b_.wTYVx1pV6pVkVvx860-1791391735.3365374-1.0.1.1-ryr8kFZEIymrhni8C5oNixLraLW8zdtoalmyZag1l.KmEC9op792cPjy633e_qj0w5XTrlGw3bqDP3_VOCCDu039KzPh5_GoAqKrbxKbNtSvzfwxbstcIjhl8R5djROm;
+        HttpOnly; SameSite=None; Secure; Path=/; Domain=groq.com; Expires=Wed, 07
+        Oct 2026 17:18:55 GMT
+      Strict-Transport-Security:
+      - max-age=15552000
+      Cf-Ray:
+      - a46e6569d801ca98-HEL
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"resp_01m4bm97s7ezj9ny7j6fyxcxdv","object":"response","status":"completed","created_at":1791391735,"output":[{"type":"reasoning","id":"resp_01m4bm97s7ezjs2gtw1qx4q8bk","status":"completed","summary":[]},{"type":"message","id":"msg_01m4bm97s7ezkb5xf61k7dpx66","status":"completed","role":"assistant","content":[{"type":"output_text","text":"Ruby
+        was created by **Yukihiro Matsumoto**, who is widely known in the programming
+        community as **\"Matz.\"\n\nHe first released Ruby in 1995 in Japan, with
+        the goal of creating a language that was fun, easy to use, and focused on
+        the programmer''s happiness (\"hobon\").","annotations":[],"logprobs":null}]}],"previous_response_id":null,"model":"qwen/qwen3.8-27b","reasoning":{"effort":"none"},"max_output_tokens":null,"text":{"format":{"type":"text"}},"tools":[],"tool_choice":"auto","truncation":"disabled","metadata":{},"groq":null,"temperature":1,"top_p":1,"user":null,"service_tier":"default","background":false,"error":null,"incomplete_details":null,"usage":{"input_tokens":19,"input_tokens_details":{"cached_tokens":0},"output_tokens":67,"output_tokens_details":{"reasoning_tokens":0},"total_tokens":86},"parallel_tool_calls":true,"store":false,"top_logprobs":null,"max_tool_calls":null}
+
+        '
+  recorded_at: Wed, 07 Oct 2026 16:48:55 GMT
+- request:
+    method: post
+    uri: https://api.groq.com/openai/v1/responses
+    body:
+      encoding: UTF-8
+      string: '{"model":"qwen/qwen3.8-27b","input":[{"role":"user","content":"Who
+        created the programming language Ruby?"},{"role":"assistant","content":[{"type":"input_text","text":"Ruby
+        was created by **Yukihiro Matsumoto**, who is widely known in the programming
+        community as **\"Matz.\"\n\nHe first released Ruby in 1995 in Japan, with
+        the goal of creating a language that was fun, easy to use, and focused on
+        the programmer''s happiness (\"hobon\")."}]},{"role":"user","content":"What
+        year was Ruby first released?"}],"stream":false,"store":false}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 07 Oct 2026 16:48:56 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - private, max-age=0, no-store, no-cache, must-revalidate
+      Server:
+      - cloudflare
+      Vary:
+      - Origin
+      X-Groq-Region:
+      - dls
+      X-Ratelimit-Limit-Requests:
+      - '1000'
+      X-Ratelimit-Limit-Tokens:
+      - '8000'
+      X-Ratelimit-Remaining-Requests:
+      - '996'
+      X-Ratelimit-Remaining-Tokens:
+      - '7236'
+      X-Ratelimit-Reset-Requests:
+      - 5m45.6s
+      X-Ratelimit-Reset-Tokens:
+      - 39.48s
+      X-Request-Id:
+      - req_01m4bm982ve9ta0hegs3qd4g4n
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=ln.fpAquwhKc9GJR2CykILEAuwKzy4rQpjDb79unHp4-1791391735.8001502-1.0.1.1-wBgR2Cn3IJMoyB.ROKudO7zZmQ.kVTOx14Qqz4fsO1RnObIn2gOv41OjXrCEWuNlTTLLoJI9izJlypjUM02KYsQS.8zO4ERH7R731kvQICGNjD7rgGr6enIM7IP0.MrS;
+        HttpOnly; SameSite=None; Secure; Path=/; Domain=groq.com; Expires=Wed, 07
+        Oct 2026 17:18:56 GMT
+      Strict-Transport-Security:
+      - max-age=15552000
+      Cf-Ray:
+      - a46e656cb866c55b-HEL
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"resp_01m4bm986te8db3bc6edavhz9r","object":"response","status":"completed","created_at":1791391736,"output":[{"type":"reasoning","id":"resp_01m4bm986te8drz94k8v50fa3h","status":"completed","summary":[]},{"type":"message","id":"msg_01m4bm986te8e81mbg7v1d3wdw","status":"completed","role":"assistant","content":[{"type":"output_text","text":"Ruby
+        was first released in **1995**.\n\nSpecifically, Yukihiro Matsumoto released
+        the first public version of Ruby in **March 1995**.","annotations":[],"logprobs":null}]}],"previous_response_id":null,"model":"qwen/qwen3.8-27b","reasoning":{"effort":"none"},"max_output_tokens":null,"text":{"format":{"type":"text"}},"tools":[],"tool_choice":"auto","truncation":"disabled","metadata":{},"groq":null,"temperature":1,"top_p":1,"user":null,"service_tier":"default","background":false,"error":null,"incomplete_details":null,"usage":{"input_tokens":106,"input_tokens_details":{"cached_tokens":0},"output_tokens":38,"output_tokens_details":{"reasoning_tokens":0},"total_tokens":144},"parallel_tool_calls":true,"store":false,"top_logprobs":null,"max_tool_calls":null}
+
+        '
+  recorded_at: Wed, 07 Oct 2026 16:48:56 GMT
+recorded_with: VCR 6.4.0

@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.groq.com/openai/v1/responses
+    body:
+      encoding: UTF-8
+      string: '{"model":"openai/gpt-oss-120b","input":[{"role":"user","content":"What''s
+        2 + 2?"}],"stream":false,"store":false}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 07 Oct 2026 16:48:58 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - private, max-age=0, no-store, no-cache, must-revalidate
+      Server:
+      - cloudflare
+      Vary:
+      - Origin
+      X-Groq-Region:
+      - dls
+      X-Ratelimit-Limit-Requests:
+      - '1000'
+      X-Ratelimit-Limit-Tokens:
+      - '8000'
+      X-Ratelimit-Remaining-Requests:
+      - '991'
+      X-Ratelimit-Remaining-Tokens:
+      - '7059'
+      X-Ratelimit-Reset-Requests:
+      - 12m57.599s
+      X-Ratelimit-Reset-Tokens:
+      - 7.057s
+      X-Request-Id:
+      - req_01m4bm9a9te59sjwgrt110h87a
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=3obVUtIJrpx.PgHjXCHGW1YtjUe0RYPd.5nlZO_kxvU-1791391738.0848591-1.0.1.1-kYzXuB2Ok80M655dREPs0EcEqqqXoW8qzkcmJ3OyD5nQwF5E825XnN61gLzombGFM6jSnfSsabBL56jxUqjiHKSFn1OZu0ZB9Kx0FwASGRD8w4lcB5yg25WsLhYT694A;
+        HttpOnly; SameSite=None; Secure; Path=/; Domain=groq.com; Expires=Wed, 07
+        Oct 2026 17:18:58 GMT
+      Strict-Transport-Security:
+      - max-age=15552000
+      Cf-Ray:
+      - a46e657b0db17c3b-HEL
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6InJlc3BfMDFtNGJtOWFkbmViZmE2YTR6OHFyM3k1cnMiLCJvYmplY3QiOiJyZXNwb25zZSIsInN0YXR1cyI6ImNvbXBsZXRlZCIsImNyZWF0ZWRfYXQiOjE3OTEzOTE3MzgsIm91dHB1dCI6W3sidHlwZSI6InJlYXNvbmluZyIsImlkIjoicmVzcF8wMW00Ym05YWRuZWJmdGJoYTUxZnl6M3BzMCIsInN0YXR1cyI6ImNvbXBsZXRlZCIsImNvbnRlbnQiOlt7InR5cGUiOiJyZWFzb25pbmdfdGV4dCIsInRleHQiOiJVc2VyIGFza3Mgc2ltcGxlIG1hdGguIFByb3ZpZGUgYW5zd2VyLiJ9XSwic3VtbWFyeSI6W119LHsidHlwZSI6Im1lc3NhZ2UiLCJpZCI6Im1zZ18wMW00Ym05YWRuZWJnODdoc2V3Mm5nMXR6eCIsInN0YXR1cyI6ImNvbXBsZXRlZCIsInJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjpbeyJ0eXBlIjoib3V0cHV0X3RleHQiLCJ0ZXh0IjoiMuKAryvigK8y4oCvPeKArzQuIiwiYW5ub3RhdGlvbnMiOltdLCJsb2dwcm9icyI6bnVsbH1dfV0sInByZXZpb3VzX3Jlc3BvbnNlX2lkIjpudWxsLCJtb2RlbCI6Im9wZW5haS9ncHQtb3NzLTEyMGIiLCJyZWFzb25pbmciOnsiZWZmb3J0IjoibWVkaXVtIn0sIm1heF9vdXRwdXRfdG9rZW5zIjpudWxsLCJ0ZXh0Ijp7ImZvcm1hdCI6eyJ0eXBlIjoidGV4dCJ9fSwidG9vbHMiOltdLCJ0b29sX2Nob2ljZSI6ImF1dG8iLCJ0cnVuY2F0aW9uIjoiZGlzYWJsZWQiLCJtZXRhZGF0YSI6e30sImdyb3EiOm51bGwsInRlbXBlcmF0dXJlIjoxLCJ0b3BfcCI6MSwidXNlciI6bnVsbCwic2VydmljZV90aWVyIjoiZGVmYXVsdCIsImJhY2tncm91bmQiOmZhbHNlLCJlcnJvciI6bnVsbCwiaW5jb21wbGV0ZV9kZXRhaWxzIjpudWxsLCJ1c2FnZSI6eyJpbnB1dF90b2tlbnMiOjc4LCJpbnB1dF90b2tlbnNfZGV0YWlscyI6eyJjYWNoZWRfdG9rZW5zIjowfSwib3V0cHV0X3Rva2VucyI6MjgsIm91dHB1dF90b2tlbnNfZGV0YWlscyI6eyJyZWFzb25pbmdfdG9rZW5zIjo5fSwidG90YWxfdG9rZW5zIjoxMDZ9LCJwYXJhbGxlbF90b29sX2NhbGxzIjp0cnVlLCJzdG9yZSI6ZmFsc2UsInRvcF9sb2dwcm9icyI6bnVsbCwibWF4X3Rvb2xfY2FsbHMiOm51bGx9Cg==
+  recorded_at: Wed, 07 Oct 2026 16:48:58 GMT
+recorded_with: VCR 6.4.0

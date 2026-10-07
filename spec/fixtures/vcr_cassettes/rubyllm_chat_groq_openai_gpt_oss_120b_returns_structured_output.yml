@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.groq.com/openai/v1/responses
+    body:
+      encoding: UTF-8
+      string: '{"model":"openai/gpt-oss-120b","input":[{"role":"user","content":"Generate
+        a person named John who is 30 years old"}],"stream":false,"store":false,"text":{"format":{"type":"json_schema","name":"response","schema":{"type":"object","properties":{"name":{"type":"string"},"age":{"type":"integer"}},"required":["name","age"],"additionalProperties":false},"strict":true}}}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 07 Oct 2026 16:48:52 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - private, max-age=0, no-store, no-cache, must-revalidate
+      Server:
+      - cloudflare
+      Vary:
+      - Origin
+      X-Groq-Region:
+      - dls
+      X-Ratelimit-Limit-Requests:
+      - '1000'
+      X-Ratelimit-Limit-Tokens:
+      - '8000'
+      X-Ratelimit-Remaining-Requests:
+      - '996'
+      X-Ratelimit-Remaining-Tokens:
+      - '7463'
+      X-Ratelimit-Reset-Requests:
+      - 5m45.6s
+      X-Ratelimit-Reset-Tokens:
+      - 4.027s
+      X-Request-Id:
+      - req_01m4bm94t9eke8yh0ygg4pkq0e
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=cuJMxEtP9ArHCy9eXwfvI_esm3dB3EBTqY5qjESpHvY-1791391732.4687557-1.0.1.1-XLq9aeoM47MAxzeaTv.ndWQlGQZU5dCTbVGm7WSkvsRz4O_bSk2t1_Vb77qrNvswnrlje2_0oP73eqp9zlooGRSNuG4qFn2WL_tGJe6R2P_3S6tDmJkjHlp2eOXMqj9u;
+        HttpOnly; SameSite=None; Secure; Path=/; Domain=groq.com; Expires=Wed, 07
+        Oct 2026 17:18:52 GMT
+      Strict-Transport-Security:
+      - max-age=15552000
+      Cf-Ray:
+      - a46e6557ecc27d5e-HEL
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"resp_01m4bm9548enj8dfc9r41rgc2r","object":"response","status":"completed","created_at":1791391732,"output":[{"type":"reasoning","id":"resp_01m4bm9548enjr06tddanqhaaw","status":"completed","content":[{"type":"reasoning_text","text":"We
+        need to output JSON matching the schema given in the response format. The
+        schema: object with properties name (string) and age (integer), required both.
+        No additionalProperties. So output: {\"name\":\"John\",\"age\":30}. Must be
+        compact. Also ensure it''s valid JSON. So final answer just that JSON."}],"summary":[]},{"type":"message","id":"msg_01m4bm9548enkbm8ah3temy55d","status":"completed","role":"assistant","content":[{"type":"output_text","text":"{\"name\":\"John\",\"age\":30}","annotations":[],"logprobs":null}]}],"previous_response_id":null,"model":"openai/gpt-oss-120b","reasoning":{"effort":"medium"},"max_output_tokens":null,"text":{"format":{"type":"json_schema","name":"response","schema":{"additionalProperties":false,"properties":{"age":{"type":"integer"},"name":{"type":"string"}},"required":["name","age"],"type":"object"},"strict":true}},"tools":[],"tool_choice":"auto","truncation":"disabled","metadata":{},"groq":null,"temperature":1,"top_p":1,"user":null,"service_tier":"default","background":false,"error":null,"incomplete_details":null,"usage":{"input_tokens":173,"input_tokens_details":{"cached_tokens":0},"output_tokens":87,"output_tokens_details":{"reasoning_tokens":66},"total_tokens":260},"parallel_tool_calls":true,"store":false,"top_logprobs":null,"max_tool_calls":null}
+
+        '
+  recorded_at: Wed, 07 Oct 2026 16:48:53 GMT
+recorded_with: VCR 6.4.0

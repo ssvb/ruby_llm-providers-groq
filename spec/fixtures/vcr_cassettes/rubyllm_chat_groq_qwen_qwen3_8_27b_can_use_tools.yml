@@ -1,0 +1,152 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.groq.com/openai/v1/responses
+    body:
+      encoding: UTF-8
+      string: '{"model":"qwen/qwen3.8-27b","input":[{"role":"user","content":"What''s
+        the weather in Berlin? Use 52.5200, 13.4050."}],"stream":false,"store":false,"tools":[{"type":"function","name":"weather","description":"Gets
+        current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude"},"longitude":{"type":"string","description":"Longitude"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true},"strict":false}]}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 07 Oct 2026 16:48:59 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - private, max-age=0, no-store, no-cache, must-revalidate
+      Server:
+      - cloudflare
+      Vary:
+      - Origin
+      X-Groq-Region:
+      - dls
+      X-Ratelimit-Limit-Requests:
+      - '1000'
+      X-Ratelimit-Limit-Tokens:
+      - '8000'
+      X-Ratelimit-Remaining-Requests:
+      - '994'
+      X-Ratelimit-Remaining-Tokens:
+      - '7281'
+      X-Ratelimit-Reset-Requests:
+      - 8m38.4s
+      X-Ratelimit-Reset-Tokens:
+      - 23.34s
+      X-Request-Id:
+      - req_01m4bm9b16ekpr23jjhgq99gdc
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=6n0BSCZAb4sticznTXikANIWQ4hRD0KAdXlgDEiQg1s-1791391738.8197184-1.0.1.1-5D88MLf22WDRiQhFRiEcyUBCinTMXeWMYkWGMy50.3eUrzi._wMKyeY3A7dYYzOmKtSIMqZPoXBG7d29JP9mB9CnwJtJdaHHSfS.4UK7khx5Hw_t5.J1DSHEBagnmj.x;
+        HttpOnly; SameSite=None; Secure; Path=/; Domain=groq.com; Expires=Wed, 07
+        Oct 2026 17:18:59 GMT
+      Strict-Transport-Security:
+      - max-age=15552000
+      Cf-Ray:
+      - a46e657f9c7102ba-HEL
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"resp_01m4bm9b82et4rkabjx8zjy7dg","object":"response","status":"completed","created_at":1791391739,"output":[{"type":"reasoning","id":"resp_01m4bm9b82et58g8q94rw0ejcc","status":"completed","summary":[]},{"type":"function_call","id":"need8cqcy","status":"completed","call_id":"need8cqcy","name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}],"previous_response_id":null,"model":"qwen/qwen3.8-27b","reasoning":{"effort":"none"},"max_output_tokens":null,"text":{"format":{"type":"text"}},"tools":[{"type":"function","name":"weather","description":"Gets
+        current weather for a location","parameters":{"additionalProperties":false,"properties":{"latitude":{"description":"Latitude","type":"string"},"longitude":{"description":"Longitude","type":"string"}},"required":["latitude","longitude"],"strict":true,"type":"object"},"strict":false}],"tool_choice":"auto","truncation":"disabled","metadata":{},"groq":null,"temperature":1,"top_p":1,"user":null,"service_tier":"default","background":false,"error":null,"incomplete_details":null,"usage":{"input_tokens":330,"input_tokens_details":{"cached_tokens":0},"output_tokens":50,"output_tokens_details":{"reasoning_tokens":0},"total_tokens":380},"parallel_tool_calls":true,"store":false,"top_logprobs":null,"max_tool_calls":null}
+
+        '
+  recorded_at: Wed, 07 Oct 2026 16:48:59 GMT
+- request:
+    method: post
+    uri: https://api.groq.com/openai/v1/responses
+    body:
+      encoding: UTF-8
+      string: '{"model":"qwen/qwen3.8-27b","input":[{"role":"user","content":"What''s
+        the weather in Berlin? Use 52.5200, 13.4050."},{"type":"function_call","call_id":"need8cqcy","name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"},{"type":"function_call_output","call_id":"need8cqcy","output":"Current
+        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h"}],"stream":false,"store":false,"tools":[{"type":"function","name":"weather","description":"Gets
+        current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude"},"longitude":{"type":"string","description":"Longitude"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true},"strict":false}]}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 07 Oct 2026 16:48:59 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - private, max-age=0, no-store, no-cache, must-revalidate
+      Server:
+      - cloudflare
+      Vary:
+      - Origin
+      X-Groq-Region:
+      - dls
+      X-Ratelimit-Limit-Requests:
+      - '1000'
+      X-Ratelimit-Limit-Tokens:
+      - '8000'
+      X-Ratelimit-Remaining-Requests:
+      - '993'
+      X-Ratelimit-Remaining-Tokens:
+      - '6708'
+      X-Ratelimit-Reset-Requests:
+      - 10m4.8s
+      X-Ratelimit-Reset-Tokens:
+      - 35.699s
+      X-Request-Id:
+      - req_01m4bm9bj5e0tbrfxv3ggsc541
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=sMd2yUwGBBEW3i4mnVSFWKBtbgB1nhkCWBTAqofoNL4-1791391739.3726306-1.0.1.1-_RWoeDDTaqG4pxnQ8oyitUmC_1.IGF8x8EiPyB73b7nG.De3EC_TmPxh_fYBOADgdpgQQb.lhRJdHmHxq2FABtPQDuifhYzQhU9Md76q3xQ04NQHmp5z.C.9AahrVONy;
+        HttpOnly; SameSite=None; Secure; Path=/; Domain=groq.com; Expires=Wed, 07
+        Oct 2026 17:18:59 GMT
+      Strict-Transport-Security:
+      - max-age=15552000
+      Cf-Ray:
+      - a46e65831e0d8d58-HEL
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6InJlc3BfMDFtNGJtOWJucmU3ZWJheTFiNnJwbTdnY2IiLCJvYmplY3QiOiJyZXNwb25zZSIsInN0YXR1cyI6ImNvbXBsZXRlZCIsImNyZWF0ZWRfYXQiOjE3OTEzOTE3MzksIm91dHB1dCI6W3sidHlwZSI6InJlYXNvbmluZyIsImlkIjoicmVzcF8wMW00Ym05Ym5yZTdlcmYyMW1zeDgzczl5eSIsInN0YXR1cyI6ImNvbXBsZXRlZCIsInN1bW1hcnkiOltdfSx7InR5cGUiOiJtZXNzYWdlIiwiaWQiOiJtc2dfMDFtNGJtOWJucmU3ZjgxNmM1NnlyYmhycGsiLCJzdGF0dXMiOiJjb21wbGV0ZWQiLCJyb2xlIjoiYXNzaXN0YW50IiwiY29udGVudCI6W3sidHlwZSI6Im91dHB1dF90ZXh0IiwidGV4dCI6IlRoZSBjdXJyZW50IHdlYXRoZXIgaW4gQmVybGluIGlzIDE1wrBDIHdpdGggYSB3aW5kIHNwZWVkIG9mIDEwIGttL2guIiwiYW5ub3RhdGlvbnMiOltdLCJsb2dwcm9icyI6bnVsbH1dfV0sInByZXZpb3VzX3Jlc3BvbnNlX2lkIjpudWxsLCJtb2RlbCI6InF3ZW4vcXdlbjMuOC0yN2IiLCJyZWFzb25pbmciOnsiZWZmb3J0Ijoibm9uZSJ9LCJtYXhfb3V0cHV0X3Rva2VucyI6bnVsbCwidGV4dCI6eyJmb3JtYXQiOnsidHlwZSI6InRleHQifX0sInRvb2xzIjpbeyJ0eXBlIjoiZnVuY3Rpb24iLCJuYW1lIjoid2VhdGhlciIsImRlc2NyaXB0aW9uIjoiR2V0cyBjdXJyZW50IHdlYXRoZXIgZm9yIGEgbG9jYXRpb24iLCJwYXJhbWV0ZXJzIjp7ImFkZGl0aW9uYWxQcm9wZXJ0aWVzIjpmYWxzZSwicHJvcGVydGllcyI6eyJsYXRpdHVkZSI6eyJkZXNjcmlwdGlvbiI6IkxhdGl0dWRlIiwidHlwZSI6InN0cmluZyJ9LCJsb25naXR1ZGUiOnsiZGVzY3JpcHRpb24iOiJMb25naXR1ZGUiLCJ0eXBlIjoic3RyaW5nIn19LCJyZXF1aXJlZCI6WyJsYXRpdHVkZSIsImxvbmdpdHVkZSJdLCJzdHJpY3QiOnRydWUsInR5cGUiOiJvYmplY3QifSwic3RyaWN0IjpmYWxzZX1dLCJ0b29sX2Nob2ljZSI6ImF1dG8iLCJ0cnVuY2F0aW9uIjoiZGlzYWJsZWQiLCJtZXRhZGF0YSI6e30sImdyb3EiOm51bGwsInRlbXBlcmF0dXJlIjoxLCJ0b3BfcCI6MSwidXNlciI6bnVsbCwic2VydmljZV90aWVyIjoiZGVmYXVsdCIsImJhY2tncm91bmQiOmZhbHNlLCJlcnJvciI6bnVsbCwiaW5jb21wbGV0ZV9kZXRhaWxzIjpudWxsLCJ1c2FnZSI6eyJpbnB1dF90b2tlbnMiOjQzMCwiaW5wdXRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6MH0sIm91dHB1dF90b2tlbnMiOjIyLCJvdXRwdXRfdG9rZW5zX2RldGFpbHMiOnsicmVhc29uaW5nX3Rva2VucyI6MH0sInRvdGFsX3Rva2VucyI6NDUyfSwicGFyYWxsZWxfdG9vbF9jYWxscyI6dHJ1ZSwic3RvcmUiOmZhbHNlLCJ0b3BfbG9ncHJvYnMiOm51bGwsIm1heF90b29sX2NhbGxzIjpudWxsfQo=
+  recorded_at: Wed, 07 Oct 2026 16:48:59 GMT
+recorded_with: VCR 6.4.0

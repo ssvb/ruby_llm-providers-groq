@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.groq.com/openai/v1/responses
+    body:
+      encoding: UTF-8
+      string: '{"model":"qwen/qwen3.8-27b","input":[{"role":"user","content":"Generate
+        a person named John who is 30 years old"}],"stream":false,"store":false,"text":{"format":{"type":"json_schema","name":"response","schema":{"type":"object","properties":{"name":{"type":"string"},"age":{"type":"integer"}},"required":["name","age"],"additionalProperties":false},"strict":true}}}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 07 Oct 2026 16:48:53 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - private, max-age=0, no-store, no-cache, must-revalidate
+      Server:
+      - cloudflare
+      Vary:
+      - Origin
+      X-Groq-Region:
+      - dls
+      X-Ratelimit-Limit-Requests:
+      - '1000'
+      X-Ratelimit-Limit-Tokens:
+      - '8000'
+      X-Ratelimit-Remaining-Requests:
+      - '999'
+      X-Ratelimit-Remaining-Tokens:
+      - '7791'
+      X-Ratelimit-Reset-Requests:
+      - 1m26.4s
+      X-Ratelimit-Reset-Tokens:
+      - 1.567s
+      X-Request-Id:
+      - req_01m4bm95h6eknbhd2g57rb86ak
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=Rp.gZmJcvxYbWZDsbdfQDBTAz7DaFtywcVrwdQQSlXk-1791391733.2010832-1.0.1.1-MBeC0_FXCrPoveYPbgkP024YhTYGhnm2G8ai26jtHdCFBhXKN11v070xGxHdVs6b11ivLdL8VDl_Rkqlhfa4lE0lfIcHCiMUBNgwfgDgZ88op59V9O6YeWQYlBnkTMXH;
+        HttpOnly; SameSite=None; Secure; Path=/; Domain=groq.com; Expires=Wed, 07
+        Oct 2026 17:18:53 GMT
+      Strict-Transport-Security:
+      - max-age=15552000
+      Cf-Ray:
+      - a46e655c799e4825-HEL
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"resp_01m4bm95k1ejrt9pm29qkr3r1w","object":"response","status":"completed","created_at":1791391733,"output":[{"type":"reasoning","id":"resp_01m4bm95k1ejs9anac75h9cntj","status":"completed","summary":[]},{"type":"message","id":"msg_01m4bm95k1ejst5m6wcxpz59xh","status":"completed","role":"assistant","content":[{"type":"output_text","text":"{\"age\":
+        30, \"name\": \"John\"}","annotations":[],"logprobs":null}]}],"previous_response_id":null,"model":"qwen/qwen3.8-27b","reasoning":{"effort":"none"},"max_output_tokens":null,"text":{"format":{"type":"json_schema","name":"response","schema":{"additionalProperties":false,"properties":{"age":{"type":"integer"},"name":{"type":"string"}},"required":["name","age"],"type":"object"},"strict":true}},"tools":[],"tool_choice":"auto","truncation":"disabled","metadata":{},"groq":null,"temperature":1,"top_p":1,"user":null,"service_tier":"default","background":false,"error":null,"incomplete_details":null,"usage":{"input_tokens":24,"input_tokens_details":{"cached_tokens":0},"output_tokens":15,"output_tokens_details":{"reasoning_tokens":0},"total_tokens":39},"parallel_tool_calls":true,"store":false,"top_logprobs":null,"max_tool_calls":null}
+
+        '
+  recorded_at: Wed, 07 Oct 2026 16:48:53 GMT
+recorded_with: VCR 6.4.0

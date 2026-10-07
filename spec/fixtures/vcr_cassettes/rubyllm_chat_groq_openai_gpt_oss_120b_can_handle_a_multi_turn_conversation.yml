@@ -1,0 +1,153 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.groq.com/openai/v1/responses
+    body:
+      encoding: UTF-8
+      string: '{"model":"openai/gpt-oss-120b","input":[{"role":"user","content":"Who
+        created the programming language Ruby?"}],"stream":false,"store":false}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 07 Oct 2026 16:48:56 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - private, max-age=0, no-store, no-cache, must-revalidate
+      Server:
+      - cloudflare
+      Vary:
+      - Origin
+      X-Groq-Region:
+      - dls
+      X-Ratelimit-Limit-Requests:
+      - '1000'
+      X-Ratelimit-Limit-Tokens:
+      - '8000'
+      X-Ratelimit-Remaining-Requests:
+      - '993'
+      X-Ratelimit-Remaining-Tokens:
+      - '7232'
+      X-Ratelimit-Reset-Requests:
+      - 10m4.8s
+      X-Ratelimit-Reset-Tokens:
+      - 5.76s
+      X-Request-Id:
+      - req_01m4bm98h5e7wagy3m0spj64fs
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=Xt7xTHUsTy4KZNZ.2ZP4MkygCap.ZB7ttt5vez1jckk-1791391736.2727015-1.0.1.1-2GLEOd60LhQGJEUluLltC.D8aUMOsiBmIoUojEGa2cgskxvNscPY1VDmEa7oyWJpgDfPcixPLmsLneV_HF9gcdsyBALA3E8rHx.wUOMTMA8fqr7pm5QMxXyT1x.DK2FQ;
+        HttpOnly; SameSite=None; Secure; Path=/; Domain=groq.com; Expires=Wed, 07
+        Oct 2026 17:18:56 GMT
+      Strict-Transport-Security:
+      - max-age=15552000
+      Cf-Ray:
+      - a46e656fb8a0817b-HEL
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6InJlc3BfMDFtNGJtOTkwY2U2ZmI3Y3M0OW53YW1manoiLCJvYmplY3QiOiJyZXNwb25zZSIsInN0YXR1cyI6ImNvbXBsZXRlZCIsImNyZWF0ZWRfYXQiOjE3OTEzOTE3MzYsIm91dHB1dCI6W3sidHlwZSI6InJlYXNvbmluZyIsImlkIjoicmVzcF8wMW00Ym05OTBjZTZmcjlkZTVrYjFmZTJlMyIsInN0YXR1cyI6ImNvbXBsZXRlZCIsImNvbnRlbnQiOlt7InR5cGUiOiJyZWFzb25pbmdfdGV4dCIsInRleHQiOiJUaGUgdXNlciBhc2tzIFwiV2hvIGNyZWF0ZWQgdGhlIHByb2dyYW1taW5nIGxhbmd1YWdlIFJ1Ynk/XCIgVGhpcyBpcyBhIHN0cmFpZ2h0Zm9yd2FyZCBmYWN0dWFsIHF1ZXN0aW9uLiBQcm92aWRlIGFuc3dlcjogUnVieSB3YXMgY3JlYXRlZCBieSBZdWtpaGlybyBNYXRzdW1vdG8sIGFsc28ga25vd24gYXMgTWF0eiwgaW4gMTk5NSwgcmVsZWFzZWQgMTk5NSwgZXRjLiBQcm92aWRlIHNvbWUgY29udGV4dC4ifV0sInN1bW1hcnkiOltdfSx7InR5cGUiOiJtZXNzYWdlIiwiaWQiOiJtc2dfMDFtNGJtOTkwY2U2Zzg3azA1N2ZlNXFhZXciLCJzdGF0dXMiOiJjb21wbGV0ZWQiLCJyb2xlIjoiYXNzaXN0YW50IiwiY29udGVudCI6W3sidHlwZSI6Im91dHB1dF90ZXh0IiwidGV4dCI6IlJ1Ynkgd2FzIGNyZWF0ZWQgYnkgKipZdWtpaGlyb+KAr01hdHN1bW90byoqLCBhIEphcGFuZXNlIGNvbXB1dGVyIHNjaWVudGlzdCB3aG8gaXMgY29tbW9ubHkga25vd24gYnkgaGlzIG5pY2tuYW1lICoq4oCcTWF0ei7igJ0qKiBIZSBiZWdhbiBkZXZlbG9waW5nIFJ1YnkgaW4gMTk5MyBhbmQgcmVsZWFzZWQgdGhlIGZpcnN0IHB1YmxpYyB2ZXJzaW9uICgwLjk1KSBpbiBEZWNlbWJlcuKArzE5OTUuIE1hdHN1bW90byBkZXNpZ25lZCBSdWJ5IHRvIGJlIGEgc2ltcGxlLCBleHByZXNzaXZlLCBhbmQgb2JqZWN04oCRb3JpZW50ZWQgbGFuZ3VhZ2UgdGhhdCBlbXBoYXNpemVzIHByb2dyYW1tZXIgaGFwcGluZXNzLiIsImFubm90YXRpb25zIjpbXSwibG9ncHJvYnMiOm51bGx9XX1dLCJwcmV2aW91c19yZXNwb25zZV9pZCI6bnVsbCwibW9kZWwiOiJvcGVuYWkvZ3B0LW9zcy0xMjBiIiwicmVhc29uaW5nIjp7ImVmZm9ydCI6Im1lZGl1bSJ9LCJtYXhfb3V0cHV0X3Rva2VucyI6bnVsbCwidGV4dCI6eyJmb3JtYXQiOnsidHlwZSI6InRleHQifX0sInRvb2xzIjpbXSwidG9vbF9jaG9pY2UiOiJhdXRvIiwidHJ1bmNhdGlvbiI6ImRpc2FibGVkIiwibWV0YWRhdGEiOnt9LCJncm9xIjpudWxsLCJ0ZW1wZXJhdHVyZSI6MSwidG9wX3AiOjEsInVzZXIiOm51bGwsInNlcnZpY2VfdGllciI6ImRlZmF1bHQiLCJiYWNrZ3JvdW5kIjpmYWxzZSwiZXJyb3IiOm51bGwsImluY29tcGxldGVfZGV0YWlscyI6bnVsbCwidXNhZ2UiOnsiaW5wdXRfdG9rZW5zIjo3OCwiaW5wdXRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6MH0sIm91dHB1dF90b2tlbnMiOjE0NCwib3V0cHV0X3Rva2Vuc19kZXRhaWxzIjp7InJlYXNvbmluZ190b2tlbnMiOjU1fSwidG90YWxfdG9rZW5zIjoyMjJ9LCJwYXJhbGxlbF90b29sX2NhbGxzIjp0cnVlLCJzdG9yZSI6ZmFsc2UsInRvcF9sb2dwcm9icyI6bnVsbCwibWF4X3Rvb2xfY2FsbHMiOm51bGx9Cg==
+  recorded_at: Wed, 07 Oct 2026 16:48:56 GMT
+- request:
+    method: post
+    uri: https://api.groq.com/openai/v1/responses
+    body:
+      encoding: UTF-8
+      string: '{"model":"openai/gpt-oss-120b","input":[{"role":"user","content":"Who
+        created the programming language Ruby?"},{"role":"assistant","content":[{"type":"input_text","text":"Ruby
+        was created by **Yukihiro Matsumoto**, a Japanese computer scientist who is
+        commonly known by his nickname **“Matz.”** He began developing Ruby in 1993
+        and released the first public version (0.95) in December 1995. Matsumoto designed
+        Ruby to be a simple, expressive, and object‑oriented language that emphasizes
+        programmer happiness."}]},{"role":"user","content":"What year was Ruby first
+        released?"}],"stream":false,"store":false}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 07 Oct 2026 16:48:57 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - private, max-age=0, no-store, no-cache, must-revalidate
+      Server:
+      - cloudflare
+      Vary:
+      - Origin
+      X-Groq-Region:
+      - dls
+      X-Ratelimit-Limit-Requests:
+      - '1000'
+      X-Ratelimit-Limit-Tokens:
+      - '8000'
+      X-Ratelimit-Remaining-Requests:
+      - '992'
+      X-Ratelimit-Remaining-Tokens:
+      - '7045'
+      X-Ratelimit-Reset-Requests:
+      - 11m31.2s
+      X-Ratelimit-Reset-Tokens:
+      - 7.162s
+      X-Request-Id:
+      - req_01m4bm998se2wsfpjm5yd9jnhw
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=xgFKuT8TtBcpaoGA_9xd6VzfPq32OiPfoPrQObiVDWM-1791391737.027779-1.0.1.1-ghY.T660RcusjkwVecwPUMDHmlvhnqfX4Xw4soXye4K30PRJg.gc7U_Rg6wwjysKd2xhhVVB297sc.xdicnsQKVcOVNfZL2G603DvabY__Cumzrz3UiApmhOJZLLzDwD;
+        HttpOnly; SameSite=None; Secure; Path=/; Domain=groq.com; Expires=Wed, 07
+        Oct 2026 17:18:57 GMT
+      Strict-Transport-Security:
+      - max-age=15552000
+      Cf-Ray:
+      - a46e657468ca6e6a-HEL
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6InJlc3BfMDFtNGJtOTloaGUzOGE3OTkxcTJnZGhxOXYiLCJvYmplY3QiOiJyZXNwb25zZSIsInN0YXR1cyI6ImNvbXBsZXRlZCIsImNyZWF0ZWRfYXQiOjE3OTEzOTE3MzcsIm91dHB1dCI6W3sidHlwZSI6InJlYXNvbmluZyIsImlkIjoicmVzcF8wMW00Ym05OWhoZTM4dHhyNzB2dnYyOTVxOSIsInN0YXR1cyI6ImNvbXBsZXRlZCIsImNvbnRlbnQiOlt7InR5cGUiOiJyZWFzb25pbmdfdGV4dCIsInRleHQiOiJVc2VyIGFza3M6IFwiV2hhdCB5ZWFyIHdhcyBSdWJ5IGZpcnN0IHJlbGVhc2VkP1wiIFByb3ZpZGUgYW5zd2VyOiAxOTk1LiBNZW50aW9uIGZpcnN0IHB1YmxpYyByZWxlYXNlIDAuOTUgRGVjZW1iZXIgMTk5NS4gUHJvdmlkZSBjb25jaXNlIGFuc3dlci4ifV0sInN1bW1hcnkiOltdfSx7InR5cGUiOiJtZXNzYWdlIiwiaWQiOiJtc2dfMDFtNGJtOTloaGUzOTh5NWdldDdtOXBmYzQiLCJzdGF0dXMiOiJjb21wbGV0ZWQiLCJyb2xlIjoiYXNzaXN0YW50IiwiY29udGVudCI6W3sidHlwZSI6Im91dHB1dF90ZXh0IiwidGV4dCI6IlJ1YnnigJlzIGZpcnN0IHB1YmxpYyByZWxlYXNlICh2ZXJzaW9u4oCvMC45NSkgY2FtZSBvdXQgaW4gKioxOTk1KiogKERlY2VtYmVy4oCvMTk5NSkuIiwiYW5ub3RhdGlvbnMiOltdLCJsb2dwcm9icyI6bnVsbH1dfV0sInByZXZpb3VzX3Jlc3BvbnNlX2lkIjpudWxsLCJtb2RlbCI6Im9wZW5haS9ncHQtb3NzLTEyMGIiLCJyZWFzb25pbmciOnsiZWZmb3J0IjoibWVkaXVtIn0sIm1heF9vdXRwdXRfdG9rZW5zIjpudWxsLCJ0ZXh0Ijp7ImZvcm1hdCI6eyJ0eXBlIjoidGV4dCJ9fSwidG9vbHMiOltdLCJ0b29sX2Nob2ljZSI6ImF1dG8iLCJ0cnVuY2F0aW9uIjoiZGlzYWJsZWQiLCJtZXRhZGF0YSI6e30sImdyb3EiOm51bGwsInRlbXBlcmF0dXJlIjoxLCJ0b3BfcCI6MSwidXNlciI6bnVsbCwic2VydmljZV90aWVyIjoiZGVmYXVsdCIsImJhY2tncm91bmQiOmZhbHNlLCJlcnJvciI6bnVsbCwiaW5jb21wbGV0ZV9kZXRhaWxzIjpudWxsLCJ1c2FnZSI6eyJpbnB1dF90b2tlbnMiOjE3NSwiaW5wdXRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6MH0sIm91dHB1dF90b2tlbnMiOjcwLCJvdXRwdXRfdG9rZW5zX2RldGFpbHMiOnsicmVhc29uaW5nX3Rva2VucyI6MzZ9LCJ0b3RhbF90b2tlbnMiOjI0NX0sInBhcmFsbGVsX3Rvb2xfY2FsbHMiOnRydWUsInN0b3JlIjpmYWxzZSwidG9wX2xvZ3Byb2JzIjpudWxsLCJtYXhfdG9vbF9jYWxscyI6bnVsbH0K
+  recorded_at: Wed, 07 Oct 2026 16:48:57 GMT
+recorded_with: VCR 6.4.0

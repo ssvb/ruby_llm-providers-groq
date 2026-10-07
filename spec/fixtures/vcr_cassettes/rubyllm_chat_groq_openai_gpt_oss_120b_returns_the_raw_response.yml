@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.groq.com/openai/v1/responses
+    body:
+      encoding: UTF-8
+      string: '{"model":"openai/gpt-oss-120b","input":[{"role":"user","content":"What
+        is the capital of France?"}],"stream":false,"store":false}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 07 Oct 2026 16:48:55 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - private, max-age=0, no-store, no-cache, must-revalidate
+      Server:
+      - cloudflare
+      Vary:
+      - Origin
+      X-Groq-Region:
+      - dls
+      X-Ratelimit-Limit-Requests:
+      - '1000'
+      X-Ratelimit-Limit-Tokens:
+      - '8000'
+      X-Ratelimit-Remaining-Requests:
+      - '994'
+      X-Ratelimit-Remaining-Tokens:
+      - '7168'
+      X-Ratelimit-Reset-Requests:
+      - 8m38.4s
+      X-Ratelimit-Reset-Tokens:
+      - 6.239s
+      X-Request-Id:
+      - req_01m4bm96zeedbtqd6qmwvn39y8
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=nEHNif1thKX8.V7kBv3UFyL7eOMknOlvZf9eVGNemyQ-1791391734.6672235-1.0.1.1-IGhN8OjtKEsr8f01SwMieADnGKukMRY7pAuT1UJ0wsoD.AzapQTI5ouD3zV.ocEWJr9Eky2sfqZDHhetZ03EOS4XcMbrb1N0rb24HcN19SkzSuaz3xVWSHzl8qV7jtw0;
+        HttpOnly; SameSite=None; Secure; Path=/; Domain=groq.com; Expires=Wed, 07
+        Oct 2026 17:18:55 GMT
+      Strict-Transport-Security:
+      - max-age=15552000
+      Cf-Ray:
+      - a46e6565ad6b6859-HEL
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"resp_01m4bm97age2z80ac2836qegwx","object":"response","status":"completed","created_at":1791391735,"output":[{"type":"reasoning","id":"resp_01m4bm97age2zr06f478qxg8at","status":"completed","content":[{"type":"reasoning_text","text":"The
+        user asks a simple factual question: capital of France is Paris. No policy
+        issues. Provide answer."}],"summary":[]},{"type":"message","id":"msg_01m4bm97age308jd64gc65t9mf","status":"completed","role":"assistant","content":[{"type":"output_text","text":"The
+        capital of France is **Paris**.","annotations":[],"logprobs":null}]}],"previous_response_id":null,"model":"openai/gpt-oss-120b","reasoning":{"effort":"medium"},"max_output_tokens":null,"text":{"format":{"type":"text"}},"tools":[],"tool_choice":"auto","truncation":"disabled","metadata":{},"groq":null,"temperature":1,"top_p":1,"user":null,"service_tier":"default","background":false,"error":null,"incomplete_details":null,"usage":{"input_tokens":78,"input_tokens_details":{"cached_tokens":0},"output_tokens":40,"output_tokens_details":{"reasoning_tokens":22},"total_tokens":118},"parallel_tool_calls":true,"store":false,"top_logprobs":null,"max_tool_calls":null}
+
+        '
+  recorded_at: Wed, 07 Oct 2026 16:48:55 GMT
+recorded_with: VCR 6.4.0

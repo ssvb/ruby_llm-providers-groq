@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.groq.com/openai/v1/responses
+    body:
+      encoding: UTF-8
+      string: '{"model":"qwen/qwen3.8-27b","input":[{"role":"user","content":"What
+        is the capital of France?"}],"stream":false,"store":false}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 07 Oct 2026 16:48:57 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - private, max-age=0, no-store, no-cache, must-revalidate
+      Server:
+      - cloudflare
+      Vary:
+      - Origin
+      X-Groq-Region:
+      - dls
+      X-Ratelimit-Limit-Requests:
+      - '1000'
+      X-Ratelimit-Limit-Tokens:
+      - '8000'
+      X-Ratelimit-Remaining-Requests:
+      - '995'
+      X-Ratelimit-Remaining-Tokens:
+      - '7392'
+      X-Ratelimit-Reset-Requests:
+      - 7m12s
+      X-Ratelimit-Reset-Tokens:
+      - 35.34s
+      X-Request-Id:
+      - req_01m4bm99xzedvt58x4pv2vqdtn
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=XLgVqOc4BryYpxr3WtbJj06g9ruNoyrH7wPhKXTx4OY-1791391737.6914153-1.0.1.1-fvXlPgyrWk0GhH6hiMdkiKPIMQMcDI6ar4utialeFyFpzwbD6tDVU4IKhZCK6J4.WdVQT.16glOHfj5lwpSsDuVqP_E_HMKTWdaVZpxcEowI2DGTh.aCZt32QFwRjwYK;
+        HttpOnly; SameSite=None; Secure; Path=/; Domain=groq.com; Expires=Wed, 07
+        Oct 2026 17:18:57 GMT
+      Strict-Transport-Security:
+      - max-age=15552000
+      Cf-Ray:
+      - a46e65789a841ede-HEL
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"resp_01m4bm99zeeeavesphwjm6thn2","object":"response","status":"completed","created_at":1791391737,"output":[{"type":"reasoning","id":"resp_01m4bm99zeeeb877rssymg8dbc","status":"completed","summary":[]},{"type":"message","id":"msg_01m4bm99zeeebtv8sty8x7x5qf","status":"completed","role":"assistant","content":[{"type":"output_text","text":"The
+        capital of France is **Paris**.","annotations":[],"logprobs":null}]}],"previous_response_id":null,"model":"qwen/qwen3.8-27b","reasoning":{"effort":"none"},"max_output_tokens":null,"text":{"format":{"type":"text"}},"tools":[],"tool_choice":"auto","truncation":"disabled","metadata":{},"groq":null,"temperature":1,"top_p":1,"user":null,"service_tier":"default","background":false,"error":null,"incomplete_details":null,"usage":{"input_tokens":19,"input_tokens_details":{"cached_tokens":0},"output_tokens":9,"output_tokens_details":{"reasoning_tokens":0},"total_tokens":28},"parallel_tool_calls":true,"store":false,"top_logprobs":null,"max_tool_calls":null}
+
+        '
+  recorded_at: Wed, 07 Oct 2026 16:48:57 GMT
+recorded_with: VCR 6.4.0

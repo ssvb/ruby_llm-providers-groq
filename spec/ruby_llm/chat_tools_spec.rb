@@ -7,6 +7,7 @@ RSpec.describe RubyLLM::Chat, :live do
 
   let(:weather_tool) do
     Class.new(RubyLLM::Tool) do
+      def self.name = 'WeatherTool'
       description 'Gets current weather for a location'
       parameter :latitude, description: 'Latitude'
       parameter :longitude, description: 'Longitude'

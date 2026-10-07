@@ -6,7 +6,7 @@ VCR.configure do |config|
   config.default_cassette_options = { record: ENV['CI'] ? :none : :once }
   config.allow_http_connections_when_no_cassette = true
   config.filter_sensitive_data('<GROQ_API_KEY>') { ENV.fetch('GROQ_API_KEY', nil) }
-  config.filter_sensitive_data('<GROQ_API_BASE>') { ENV.fetch('GROQ_API_BASE', nil) }
+  config.filter_sensitive_data('https://api.groq.com/openai/v1') { ENV.fetch('GROQ_API_BASE', nil) }
 
   config.before_record do |interaction|
     next unless interaction.request.headers['Authorization']

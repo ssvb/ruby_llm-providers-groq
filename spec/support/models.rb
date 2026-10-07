@@ -3,7 +3,10 @@
 # Remove chat-derived matrices the model does not support and add real ids for the empty operation matrices.
 # See RubyLLM's full live matrix and specs: https://github.com/crmne/ruby_llm/tree/main/spec
 PROVIDER = :groq
-CHAT_MODELS = [].freeze
+CHAT_MODELS = [
+  { provider: :groq, model: 'openai/gpt-oss-120b' },
+  { provider: :groq, model: 'qwen/qwen3.8-27b' }
+].freeze
 TOOL_MODELS = CHAT_MODELS
 STRUCTURED_OUTPUT_MODELS = CHAT_MODELS
 

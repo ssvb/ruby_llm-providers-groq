@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.groq.com/openai/v1/responses
+    body:
+      encoding: UTF-8
+      string: '{"model":"qwen/qwen3.8-27b","input":[{"role":"user","content":"What''s
+        2 + 2?"}],"stream":false,"store":false}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 07 Oct 2026 18:13:49 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - private, max-age=0, no-store, no-cache, must-revalidate
+      Server:
+      - cloudflare
+      Vary:
+      - Origin
+      X-Groq-Region:
+      - dls
+      X-Ratelimit-Limit-Requests:
+      - '1000'
+      X-Ratelimit-Limit-Tokens:
+      - '8000'
+      X-Ratelimit-Remaining-Requests:
+      - '999'
+      X-Ratelimit-Remaining-Tokens:
+      - '7267'
+      X-Ratelimit-Reset-Requests:
+      - 1m26.4s
+      X-Ratelimit-Reset-Tokens:
+      - 5.497s
+      X-Request-Id:
+      - req_01m4bs4pbheewrzxvdbfefd3dd
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=6VwNzqbgGnnwoik463vul.l0DmeekxoZX26hKRNFpeU-1791396829.467365-1.0.1.1-oQFTQBmgZrxNsFf5BES05N2SBNZT4ufiwd0c5bHFlFATqgCNFPk0VIFc17gm9eHQ15Qy3EqciRwjwg3jobZZo8Ux33_QXP4nOlXZVZ8NlRrcTtUiMkSx970gMcNfcxPT;
+        HttpOnly; SameSite=None; Secure; Path=/; Domain=groq.com; Expires=Wed, 07
+        Oct 2026 18:43:49 GMT
+      Strict-Transport-Security:
+      - max-age=15552000
+      Cf-Ray:
+      - a46ee1c82cc5d800-HEL
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"resp_01m4bs4pd2ekar23w5etaks05r","object":"response","status":"completed","created_at":1791396829,"output":[{"type":"reasoning","id":"resp_01m4bs4pd2ekb8zgmq5rabvvg7","status":"completed","summary":[]},{"type":"message","id":"msg_01m4bs4pd2ekbvenkr3dmeebn5","status":"completed","role":"assistant","content":[{"type":"output_text","text":"2
+        + 2 is **4**.","annotations":[],"logprobs":null}]}],"previous_response_id":null,"model":"qwen/qwen3.8-27b","reasoning":{"effort":"none"},"max_output_tokens":null,"text":{"format":{"type":"text"}},"tools":[],"tool_choice":"auto","truncation":"disabled","metadata":{},"groq":null,"temperature":1,"top_p":1,"user":null,"service_tier":"default","background":false,"error":null,"incomplete_details":null,"usage":{"input_tokens":20,"input_tokens_details":{"cached_tokens":0},"output_tokens":9,"output_tokens_details":{"reasoning_tokens":0},"total_tokens":29},"parallel_tool_calls":true,"store":false,"top_logprobs":null,"max_tool_calls":null}
+
+        '
+  recorded_at: Wed, 07 Oct 2026 18:13:49 GMT
+recorded_with: VCR 6.4.0
